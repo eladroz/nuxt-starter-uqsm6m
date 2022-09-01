@@ -5,11 +5,18 @@
 </template>
 
 <script setup lang="ts">
+import { contentChangeEmitter } from "~~/utils/emitter";
+
 const route = useRoute();
-const { data: page } = await useAsyncData(() =>
+const { data: page, refresh } = await useAsyncData(() =>
   $fetch('/api/page', {
     method: 'post',
     body: '/' + ([...route.params.slug] || []).join('/'),
   })
 );
+
+contentChangeEmitter.on('change', () => {
+      console.log(`There was a change!`);
+      refresh();
+    })
 </script>
