@@ -25,3 +25,5 @@ This outputs your own Stackbit URL. Open this URL, register or sign in, and you 
 ## Support & Feedback
 
 [Join us on Discord](https://discord.gg/HUNhjVkznH) for community support and to provide feedback to us.
+
+Based on code contributed by [Lev Myndra](https://github.com/talaxasy).
